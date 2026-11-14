@@ -77,13 +77,16 @@ position = Vector2(136, -71)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
+zoom = Vector2(5, 5)
 limit_left = 0
 limit_top = -480
 limit_right = 640
 limit_bottom = 0
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Player/Camera2D" unique_id=335586971]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2023405988]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=335586971]
 offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)

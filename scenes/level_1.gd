@@ -14,4 +14,4 @@ func _process(_delta: float) -> void:
 	if $Player.position[1] > $Player/Camera2D.limit_bottom:
 		$Player/Camera2D.limit_top += 480
 		$Player/Camera2D.limit_bottom += 480
-	$Player/Camera2D/Label.text = "Charge time: " + str($Player.charge_time) + "\nHeight: " + str((round($Player.position.y) + 47.0) / -16) 
+	$CanvasLayer/Label.text = "Charge time: " + str($Player.charge_time) + "\nHeight: " + str((round($Player.position.y) + 47.0) / -16) + "\nAnimation: " + str($Player/AnimatedSprite2D.animation)
