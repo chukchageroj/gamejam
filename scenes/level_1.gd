@@ -14,10 +14,10 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and can_interact:
 		get_tree().change_scene_to_file("res://scenes/flashback_1.tscn")
 
-func _on_camp_body_entered(body: Node2D) -> void:
+func _on_camp_body_entered(_body: Node2D) -> void:
 	$Camp/Interact.visible = true
 	can_interact = true
 
-func _on_camp_body_exited(body: Node2D) -> void:
+func _on_camp_body_exited(_body: Node2D) -> void:
 	$Camp/Interact.visible = false
 	can_interact = false
