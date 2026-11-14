@@ -1,0 +1,17 @@
+extends HSlider
+
+@export_enum("Music", "SFX") var bus_name: String = "Music"
+
+var bus_id: int = -1
+
+func _ready() -> void:
+	bus_id = AudioServer.get_bus_index(bus_name)
+	if bus_id == -1:
+		push_error("%s: шина '%s' не найдена" % [name, bus_name])
+		return
+	value = db_to_linear(AudioServer.get_bus_volume_db(bus_id))
+
+func _on_value_changed(new_value: float) -> void:
+	if bus_id == -1:
+		return
+	AudioServer.set_bus_volume_db(bus_id, linear_to_db(new_value))
