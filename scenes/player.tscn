@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c4m0h8gbaabpd" path="res://graphics/jump.png" id="4_fjrip"]
 [ext_resource type="Texture2D" uid="uid://cvithie50vt0p" path="res://graphics/landing.png" id="5_smehm"]
 [ext_resource type="Texture2D" uid="uid://bi4axm22njb5a" path="res://graphics/run.png" id="6_ur7pv"]
+[ext_resource type="Script" uid="uid://dc7th3sn8i5ij" path="res://snow.gd" id="7_fjrip"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7n3ac"]
 radius = 7.5
@@ -215,3 +216,6 @@ animation = &"landing"
 autoplay = "idle"
 frame = 6
 frame_progress = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1764339308]
+script = ExtResource("7_fjrip")
