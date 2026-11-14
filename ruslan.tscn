@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c3eltsu7o0llu"]
+
+[ext_resource type="Script" uid="uid://dc7th3sn8i5ij" path="res://snow.gd" id="1_ar1uv"]
+
+[node name="RUSLAN" type="Node2D" unique_id=119701150]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1178875558]
+script = ExtResource("1_ar1uv")

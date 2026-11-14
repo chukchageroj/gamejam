@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://jqx145jrhlf0" path="res://graphics/camp.png" id="3_4nkto"]
 [ext_resource type="Texture2D" uid="uid://cdxa2v4q7x55y" path="res://graphics/tileset.png" id="3_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://dyjs0vkvohoar" path="res://graphics/E.png" id="4_4nkto"]
+[ext_resource type="Script" uid="uid://dc7th3sn8i5ij" path="res://snow.gd" id="6_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("3_5xbjy")
@@ -249,6 +250,9 @@ offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "PEnis"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1578917575]
+script = ExtResource("6_fcfvj")
 
 [connection signal="body_entered" from="Camp" to="." method="_on_camp_body_entered"]
 [connection signal="body_exited" from="Camp" to="." method="_on_camp_body_exited"]
