@@ -188,10 +188,11 @@ position = Vector2(136, -71)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
+zoom = Vector2(2, 2)
 limit_left = 0
-limit_top = -240
 limit_right = 320
 limit_bottom = 0
+position_smoothing_enabled = true
 metadata/_edit_group_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2023405988]
