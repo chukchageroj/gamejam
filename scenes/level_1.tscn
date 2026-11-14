@@ -31,6 +31,17 @@ sources/2 = SubResource("TileSetAtlasSource_5xbjy")
 a = Vector2(640, 0)
 b = Vector2(0, 0)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f1jgh"]
+b = Vector2(0, -15904)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qu88i"]
+a = Vector2(640, -15904)
+b = Vector2(640, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lvi02"]
+a = Vector2(640, -15904)
+b = Vector2(0, -15904)
+
 [node name="Level1" type="Node2D" unique_id=225641070]
 script = ExtResource("1_bswci")
 
@@ -46,8 +57,20 @@ tile_set = SubResource("TileSet_3vyb7")
 
 [node name="Borders" type="StaticBody2D" parent="." unique_id=274333483]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders" unique_id=1738863736]
+[node name="1" type="CollisionShape2D" parent="Borders" unique_id=1738863736]
 shape = SubResource("SegmentShape2D_7n3ac")
+metadata/_edit_lock_ = true
+
+[node name="2" type="CollisionShape2D" parent="Borders" unique_id=1205146924]
+shape = SubResource("SegmentShape2D_f1jgh")
+metadata/_edit_lock_ = true
+
+[node name="3" type="CollisionShape2D" parent="Borders" unique_id=1213751192]
+shape = SubResource("SegmentShape2D_qu88i")
+metadata/_edit_lock_ = true
+
+[node name="4" type="CollisionShape2D" parent="Borders" unique_id=867008858]
+shape = SubResource("SegmentShape2D_lvi02")
 
 [node name="Player" parent="." unique_id=1064505858 instance=ExtResource("1_014kd")]
 position = Vector2(136, -71)
