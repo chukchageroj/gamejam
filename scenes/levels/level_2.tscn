@@ -252,10 +252,10 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 metadata/_edit_group_ = true
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1578917575]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578917575]
 script = ExtResource("6_hey2k")
 
-[node name="Label" type="Label" parent="CanvasLayer2" unique_id=335586971]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=335586971]
 offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
