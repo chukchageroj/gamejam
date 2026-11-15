@@ -236,6 +236,7 @@ position = Vector2(1.5, 10.5)
 shape = SubResource("RectangleShape2D_7n3ac")
 
 [node name="Interact" type="Sprite2D" parent="Camp" unique_id=1564371842]
+visible = false
 position = Vector2(1, -20.5)
 texture = ExtResource("4_6cvei")
 
