@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 TransitionScreen="*uid://b6ie8l6hc1o75"
+AudioController="*uid://c13d7ymcvs3ht"
 
 [display]
 

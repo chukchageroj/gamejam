@@ -1,5 +1,10 @@
 extends Node2D
 
+const THEME_MUSIC = preload("res://audio/Pulse.wav")
+
+func _ready() -> void:
+	AudioController.play_music(THEME_MUSIC)
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("interact") and $E.visible:
 		TransitionScreen.transition()

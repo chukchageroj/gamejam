@@ -1,10 +1,12 @@
 extends Node2D
 
+const THEME_MUSIC = preload("res://audio/March.ogg")
+
 var can_interact: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	AudioController.play_music(THEME_MUSIC, true)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

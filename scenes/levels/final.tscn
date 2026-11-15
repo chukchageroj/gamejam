@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cymkvdc18ju8t" path="res://graphics/sky.png" id="5_n2dtb"]
 [ext_resource type="Texture2D" uid="uid://dho26m8le3yhr" path="res://graphics/dust.png" id="5_w5t8p"]
 [ext_resource type="Texture2D" uid="uid://dkyb7ansjlebl" path="res://graphics/over.png" id="6_w5t8p"]
-[ext_resource type="AudioStream" uid="uid://bke885b8admda" path="res://audio/MissUp_theme.ogg" id="8_lia11"]
 [ext_resource type="Texture2D" uid="uid://uu4kx2wv3d4q" path="res://graphics/title.png" id="9_y0ebc"]
 [ext_resource type="Texture2D" uid="uid://dyjs0vkvohoar" path="res://graphics/E.png" id="10_humeh"]
 
@@ -253,17 +252,6 @@ limit_bottom = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578917575]
 script = ExtResource("4_w5t8p")
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=335586971]
-offset_right = 42.0
-offset_bottom = 23.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=382770182]
-stream = ExtResource("8_lia11")
-autoplay = true
-parameters/looping = false
 
 [node name="Title" type="Sprite2D" parent="." unique_id=1372390077]
 position = Vector2(160, -166)

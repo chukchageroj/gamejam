@@ -1,14 +1,12 @@
 extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	AudioController.play_music(null)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if $Player.position.y < -1340:
+	if $Player.position.y < -1350:
 		$"Borders/2".position.x = 159.0
 	if $Player.position.x > 336:
 		get_tree().change_scene_to_file("res://scenes/levels/final.tscn")

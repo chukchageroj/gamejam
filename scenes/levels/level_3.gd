@@ -1,12 +1,12 @@
 extends Node2D
 
+const THEME_MUSIC = preload("res://audio/Dark.ogg")
+
 var can_interact: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	AudioController.play_music(THEME_MUSIC, true)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$CanvasLayer/Label.text = "Height: " + str(int(round((round($Player.position.y) + 48) / -16)) + 1000) + ' m'
 	if $Player.position.y < -8200:
