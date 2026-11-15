@@ -93,7 +93,7 @@ tile_set = SubResource("TileSet_3vyb7")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=1064505858 instance=ExtResource("3_d3hlp")]
-position = Vector2(4799, -266)
+position = Vector2(238, -14)
 speed = 300.0
 metadata/_edit_group_ = true
 
