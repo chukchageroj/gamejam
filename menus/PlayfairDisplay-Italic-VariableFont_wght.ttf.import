@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bfaosj4vae50g"
-path="res://.godot/imported/VCR_OSD_MONO_1.001.ttf-a44ba32028dbe023aea5d96d75895c4f.fontdata"
+uid="uid://dxcwtrdsqs0y6"
+path="res://.godot/imported/PlayfairDisplay-Italic-VariableFont_wght.ttf-16b3b9c89944837db61a6fd7c2ebc429.fontdata"
 
 [deps]
 
-source_file="res://menu/VCR_OSD_MONO_1.001.ttf"
-dest_files=["res://.godot/imported/VCR_OSD_MONO_1.001.ttf-a44ba32028dbe023aea5d96d75895c4f.fontdata"]
+source_file="res://menus/PlayfairDisplay-Italic-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/PlayfairDisplay-Italic-VariableFont_wght.ttf-16b3b9c89944837db61a6fd7c2ebc429.fontdata"]
 
 [params]
 

@@ -9,8 +9,9 @@ extends Control
 func _ready() -> void:
 	main_buttons.visible = true
 	settings.visible = false
-
-
+	PopUpWindow.hide()
+	
+	PopUpWindow.close_requested.connect(_on_windowpopup_close_requested)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 @warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
@@ -18,7 +19,7 @@ func _process(delta: float) -> void:
 
 #Start, settings -> transition to another scene
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/test-scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 
 
@@ -46,3 +47,11 @@ func _on_cross_icon_button_pressed() -> void:
 
 func _on_no_button_pressed() -> void:
 	PopUpWindow.hide()
+	
+
+
+
+
+func _on_windowpopup_close_requested() -> void:
+	PopUpWindow.hide()
+	main_buttons.visible = true

@@ -12,7 +12,7 @@ func _ready() -> void:
 
 	particles.amount = 150
 	particles.lifetime = 8.0
-	particles.preprocess = 8.0  # снег уже идёт в первый кадр
+	particles.preprocess = 8.0  
 	particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_RECTANGLE
 	particles.direction = Vector2(0, 1)
 	particles.spread = 15.0
