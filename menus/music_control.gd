@@ -14,4 +14,8 @@ func _ready() -> void:
 func _on_value_changed(new_value: float) -> void:
 	if bus_id == -1:
 		return
-	AudioServer.set_bus_volume_db(bus_id, linear_to_db(new_value))
+	if new_value <= 0.001:
+		AudioServer.set_bus_mute(bus_id, true)
+		return
+	AudioServer.set_bus_mute(bus_id, false)
+	AudioServer.set_bus_volume_db(bus_id, maxf(linear_to_db(new_value), -80.0))
