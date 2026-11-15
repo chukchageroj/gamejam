@@ -12,7 +12,7 @@ func _process(_delta: float) -> void:
 	if $Player.position.y < -8200:
 		$"Borders/2".position.x = 159.0
 	if Input.is_action_just_pressed("interact") and can_interact:
-		get_tree().change_scene_to_file("res://scenes/flashbacks/flashback_3.tscn")
+		get_tree().change_scene_to_file("res://scenes/flashbacks/flashback_2.tscn")
 
 func _on_camp_body_entered(_body: Node2D) -> void:
 	$Camp/Interact.visible = true

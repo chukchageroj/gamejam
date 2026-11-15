@@ -236,11 +236,12 @@ position = Vector2(1.5, 10.5)
 shape = SubResource("RectangleShape2D_7n3ac")
 
 [node name="Interact" type="Sprite2D" parent="Camp" unique_id=1564371842]
+visible = false
 position = Vector2(1, -20.5)
 texture = ExtResource("4_ha73p")
 
 [node name="Player" parent="." unique_id=1064505858 instance=ExtResource("5_vcx5n")]
-position = Vector2(208, -48)
+position = Vector2(238, -7995)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
@@ -252,16 +253,14 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 metadata/_edit_group_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2023405988]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578917575]
+script = ExtResource("6_56dhn")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=335586971]
 offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "PEnis"
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1578917575]
-script = ExtResource("6_56dhn")
 
 [connection signal="body_entered" from="Camp" to="." method="_on_camp_body_entered"]
 [connection signal="body_exited" from="Camp" to="." method="_on_camp_body_exited"]
