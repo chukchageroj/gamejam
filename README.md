@@ -19,7 +19,7 @@ Game's inspiration was Jump King & Doodle Jump.
  | Interact | E
 
  ## How can I play?
- This game is available in web-version. Try it here: bukmen.itch.io/miss-up
+ This game is available in web-version. Try it here: <a href="bukmen.itch.io/miss-up">Link
 
  ## Our flawless team
  Diyar "DikoRiko" Askarov - Art & Sound & Visuals Design 
