@@ -219,6 +219,7 @@ position = Vector2(156, -48)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = -1696
 limit_right = 320
