@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cxvwytfd6npq1"]
+
+[ext_resource type="Texture2D" uid="uid://cy04m34skr0je" path="res://graphics/flashback_1.png" id="1_vsx4d"]
+[ext_resource type="Script" uid="uid://bhpdjf1r5gtt4" path="res://scenes/flashbacks/flashback_1.gd" id="1_xrtcr"]
+[ext_resource type="Texture2D" uid="uid://dyjs0vkvohoar" path="res://graphics/E.png" id="3_uvkya"]
+
+[node name="Flashback1" type="Node2D" unique_id=1631147547]
+script = ExtResource("1_xrtcr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=869033696]
+texture = ExtResource("1_vsx4d")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=548860873]
+texture_filter = 2
+limit_left = -320
+limit_top = -240
+limit_right = 320
+limit_bottom = 240
+
+[node name="E" type="Sprite2D" parent="." unique_id=1620505303]
+visible = false
+position = Vector2(283, 209)
+scale = Vector2(2, 2)
+texture = ExtResource("3_uvkya")
+
+[node name="Timer" type="Timer" parent="." unique_id=1492993004]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
