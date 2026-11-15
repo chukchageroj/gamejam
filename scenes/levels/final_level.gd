@@ -10,7 +10,5 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if $Player.position.y < -1340:
 		$"Borders/2".position.x = 159.0
-
-
-func _on_area_2d_body_entered(_body: Node2D) -> void:
-	pass # Replace with function body.
+	if $Player.position.x > 336:
+		get_tree().change_scene_to_file("res://scenes/levels/final.tscn")

@@ -184,7 +184,7 @@ b = Vector2(32, -9152)
 size = Vector2(192.375, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qu88i"]
-size = Vector2(172, 128)
+size = Vector2(1, 128)
 
 [node name="FinalLevel" type="Node2D" unique_id=225641070]
 script = ExtResource("1_vmyuh")
@@ -249,10 +249,10 @@ offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=286719627]
+[node name="Trigger" type="Area2D" parent="." unique_id=286719627]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1270402438]
-position = Vector2(394, -1408)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=1270402438]
+position = Vector2(322.5, -1408)
 shape = SubResource("RectangleShape2D_qu88i")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]

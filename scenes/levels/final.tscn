@@ -1,10 +1,12 @@
-[gd_scene format=3 uid="uid://co4yt4ijvvc2t"]
+[gd_scene format=4 uid="uid://co4yt4ijvvc2t"]
 
 [ext_resource type="Script" uid="uid://2eiftbqcdf4m" path="res://scenes/levels/final.gd" id="1_dqvne"]
 [ext_resource type="Texture2D" uid="uid://cdxa2v4q7x55y" path="res://graphics/tileset.png" id="2_n2dtb"]
-[ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="3_d3hlp"]
 [ext_resource type="Script" uid="uid://dc7th3sn8i5ij" path="res://snow.gd" id="4_w5t8p"]
-[ext_resource type="Texture2D" uid="uid://dm0qyws5h58dg" path="res://graphics/sky.png" id="5_n2dtb"]
+[ext_resource type="Texture2D" uid="uid://bi4axm22njb5a" path="res://graphics/run.png" id="5_d3hlp"]
+[ext_resource type="Texture2D" uid="uid://cymkvdc18ju8t" path="res://graphics/sky.png" id="5_n2dtb"]
+[ext_resource type="Texture2D" uid="uid://dho26m8le3yhr" path="res://graphics/dust.png" id="5_w5t8p"]
+[ext_resource type="Texture2D" uid="uid://dkyb7ansjlebl" path="res://graphics/over.png" id="6_w5t8p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
 texture = ExtResource("2_n2dtb")
@@ -78,6 +80,127 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/3 = SubResource("TileSetAtlasSource_fcfvj")
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7n3ac"]
+a = Vector2(-6, -174)
+b = Vector2(-6, -30)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_f1jgh"]
+a = Vector2(160, 44)
+b = Vector2(160, -101)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qu88i"]
+a = Vector2(160, -240)
+b = Vector2(0, -240)
+
+[sub_resource type="Animation" id="Animation_n2dtb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(16, -112)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_d3hlp")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:hframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_dqvne"]
+resource_name = "new_animation"
+length = 11.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4, 4.25, 4.5, 4.75, 5, 5.25, 5.5, 5.75, 6, 6.25, 6.5, 6.75, 7, 7.25, 7.5, 7.75, 8, 8.25, 8.5, 8.75, 9, 9.25, 9.5, 9.75, 10, 10.25, 10.5, 10.75, 11, 11.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.999, 5, 8.999, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(16, -112), Vector2(144, -112), Vector2(160, -112), Vector2(160, -112), Vector2(144, -112)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5, 9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_d3hlp"), ExtResource("5_w5t8p"), ExtResource("6_w5t8p")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:hframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5, 9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [4, 16, 10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n2dtb"]
+_data = {
+&"RESET": SubResource("Animation_n2dtb"),
+&"new_animation": SubResource("Animation_dqvne")
+}
+
 [node name="Final" type="Node2D" unique_id=225641070]
 script = ExtResource("1_dqvne")
 
@@ -85,26 +208,43 @@ script = ExtResource("1_dqvne")
 metadata/_edit_lock_ = true
 
 [node name="Sky" type="Sprite2D" parent="Layers" unique_id=697213382]
-position = Vector2(160, -115)
+position = Vector2(160, -120)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_n2dtb")
 
 [node name="CollisionLayer" type="TileMapLayer" parent="Layers" unique_id=64458850]
+tile_map_data = PackedByteArray("AAAAAP3/AwABAAQAAAABAP3/AwABAAQAAAACAP3/AwABAAQAAAADAP3/AwABAAQAAAAEAP3/AwACAAQAAAAEAP7/AwABAAUAAAADAP//AwACAAcAAAACAP//AwACAAcAAAADAP7/AwAAAAYAAAACAP7/AwAAAAUAAAABAP7/AwACAAgAAAAAAP7/AwAAAAYAAAAAAP//AwACAAgAAAABAP//AwAAAAYAAAA=")
 tile_set = SubResource("TileSet_3vyb7")
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." unique_id=1064505858 instance=ExtResource("3_d3hlp")]
-position = Vector2(238, -14)
-speed = 300.0
-metadata/_edit_group_ = true
+[node name="Borders" type="StaticBody2D" parent="." unique_id=1870459990]
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
+[node name="1" type="CollisionShape2D" parent="Borders" unique_id=397633938]
+position = Vector2(6, -66)
+shape = SubResource("SegmentShape2D_7n3ac")
+
+[node name="2" type="CollisionShape2D" parent="Borders" unique_id=1303559106]
+position = Vector2(0, -139)
+shape = SubResource("SegmentShape2D_f1jgh")
+
+[node name="3" type="CollisionShape2D" parent="Borders" unique_id=1137128511]
+shape = SubResource("SegmentShape2D_qu88i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=884976789]
+libraries/ = SubResource("AnimationLibrary_n2dtb")
+autoplay = &"new_animation"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=421578391]
+position = Vector2(16, -112)
+texture = ExtResource("5_d3hlp")
+hframes = 4
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1587078792]
 zoom = Vector2(2, 2)
 limit_left = 0
+limit_top = -240
 limit_right = 320
 limit_bottom = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-metadata/_edit_group_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578917575]
 script = ExtResource("4_w5t8p")
