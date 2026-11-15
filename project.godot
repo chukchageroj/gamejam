@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
 
+[autoload]
+
+TransitionScreen="*uid://b6ie8l6hc1o75"
+
 [display]
 
 window/size/viewport_width=640
