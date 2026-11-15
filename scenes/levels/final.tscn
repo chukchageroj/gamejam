@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://co4yt4ijvvc2t"]
+
+[ext_resource type="Script" uid="uid://2eiftbqcdf4m" path="res://scenes/levels/final.gd" id="1_dqvne"]
+[ext_resource type="Texture2D" uid="uid://cdxa2v4q7x55y" path="res://graphics/tileset.png" id="2_n2dtb"]
+[ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="3_d3hlp"]
+[ext_resource type="Script" uid="uid://dc7th3sn8i5ij" path="res://snow.gd" id="4_w5t8p"]
+[ext_resource type="Texture2D" uid="uid://dm0qyws5h58dg" path="res://graphics/sky.png" id="5_n2dtb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcfvj"]
+texture = ExtResource("2_n2dtb")
+texture_region_size = Vector2i(32, 32)
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, 16, -16, 16, -16, -16, 16, 16, 16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, -16, -16, -16, -16, -16, 16, 16, 16)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -16, -16, 16, -16, 16)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -16, 16, 16, -16, -16)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, -16, -16, -16, -16, -16, 16, 16, 16)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, 16, 16, -16, 16, -16, -16, 16, 16, 16)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -16, 16, 16, -16, -16)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -16, -16, 16, -16, 16)
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, -16)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 11.789337, 16, 16, -16, 16)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -16, -16, 16, -16, 16)
+0:11/0 = 0
+0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -16, -16, -16, -16, -16, 16, 16, 16)
+1:11/0 = 0
+1:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -16, -16, -16, -16, -16, 16, 16, 16)
+2:11/0 = 0
+2:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -16, -16, -16, -16, -16, 16, 16, 16)
+2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16, -16, -16)
+
+[sub_resource type="TileSet" id="TileSet_3vyb7"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/3 = SubResource("TileSetAtlasSource_fcfvj")
+
+[node name="Final" type="Node2D" unique_id=225641070]
+script = ExtResource("1_dqvne")
+
+[node name="Layers" type="Node2D" parent="." unique_id=1402945824]
+metadata/_edit_lock_ = true
+
+[node name="Sky" type="Sprite2D" parent="Layers" unique_id=697213382]
+position = Vector2(160, -115)
+texture = ExtResource("5_n2dtb")
+
+[node name="CollisionLayer" type="TileMapLayer" parent="Layers" unique_id=64458850]
+tile_set = SubResource("TileSet_3vyb7")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=1064505858 instance=ExtResource("3_d3hlp")]
+position = Vector2(4799, -266)
+speed = 300.0
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_right = 320
+limit_bottom = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+metadata/_edit_group_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578917575]
+script = ExtResource("4_w5t8p")
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=335586971]
+offset_right = 42.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
