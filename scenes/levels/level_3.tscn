@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dyjs0vkvohoar" path="res://graphics/E.png" id="4_ha73p"]
 [ext_resource type="PackedScene" uid="uid://b15tgnborxqam" path="res://scenes/player.tscn" id="5_vcx5n"]
 [ext_resource type="Script" uid="uid://dc7th3sn8i5ij" path="res://snow.gd" id="6_56dhn"]
+[ext_resource type="Texture2D" uid="uid://cieikjo320lcr" path="res://graphics/dark.png" id="7_fkk1g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4nkto"]
 texture = ExtResource("2_hhfj6")
@@ -244,7 +245,7 @@ position = Vector2(1, -20.5)
 texture = ExtResource("4_ha73p")
 
 [node name="Player" parent="." unique_id=1064505858 instance=ExtResource("5_vcx5n")]
-position = Vector2(238, -7995)
+position = Vector2(157, -48)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
@@ -264,6 +265,10 @@ offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "PEnis"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1722173284]
+position = Vector2(426, 240)
+texture = ExtResource("7_fkk1g")
 
 [connection signal="body_entered" from="Camp" to="." method="_on_camp_body_entered"]
 [connection signal="body_exited" from="Camp" to="." method="_on_camp_body_exited"]

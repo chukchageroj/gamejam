@@ -48,6 +48,30 @@ func _on_cross_icon_button_pressed() -> void:
 func _on_no_button_pressed() -> void:
 	PopUpWindow.hide()
 	main_buttons.visible = true
+
+
+func _on_start_mouse_entered() -> void:
+	AudioController.play_sfx(preload(\"res://audio/sfx.wav\"))
+
+
+func _on_options_mouse_entered() -> void:
+	AudioController.play_sfx(preload(\"res://audio/sfx.wav\"))
+
+
+func _on_quit_mouse_entered() -> void:
+	AudioController.play_sfx(preload(\"res://audio/sfx.wav\"))
+
+
+func _on_no_button_mouse_entered() -> void:
+	AudioController.play_sfx(preload(\"res://audio/sfx.wav\"))
+
+
+func _on_yes_button_mouse_entered() -> void:
+	AudioController.play_sfx(preload(\"res://audio/sfx.wav\"))
+
+
+func _on_full_screen_control_mouse_entered() -> void:
+	AudioController.play_sfx(preload(\"res://audio/sfx.wav\"))
 "
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1wch"]
@@ -305,24 +329,6 @@ offset_bottom = 177.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="OptionsLabel" type="Label" parent="Settings" unique_id=476300852]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -105.0
-offset_top = 14.0
-offset_right = 115.0
-offset_bottom = 72.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_db6sc")
-theme_override_font_sizes/font_size = 27
-text = "Options"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
 [node name="CrossIconButton" type="Button" parent="Settings" unique_id=1246102829]
 layout_mode = 0
 offset_left = 396.0
@@ -351,6 +357,24 @@ step = 0.05
 value = 1.0
 script = SubResource("GDScript_0u6b5")
 
+[node name="OptionsLabel" type="Label" parent="Settings/MusicControl" unique_id=72369765]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.5
+offset_top = 66.0
+offset_right = 109.5
+offset_bottom = 124.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_db6sc")
+theme_override_font_sizes/font_size = 27
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="FullScreenControl" type="CheckButton" parent="Settings" unique_id=2022466938]
 layout_mode = 0
 offset_left = 50.0
@@ -375,18 +399,42 @@ step = 0.05
 value = 1.0
 script = SubResource("GDScript_nbft7")
 
+[node name="OptionLabel" type="Label" parent="Settings/SFXControl" unique_id=937331606]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -105.5
+offset_top = 37.0
+offset_right = 114.5
+offset_bottom = 95.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_db6sc")
+theme_override_font_sizes/font_size = 27
+text = "SFX"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="MenuSnow" type="CanvasLayer" parent="." unique_id=896296262]
 script = ExtResource("4_ytayx")
 
+[connection signal="mouse_entered" from="MainButtons/Start" to="." method="_on_start_mouse_entered"]
 [connection signal="pressed" from="MainButtons/Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="MainButtons/Options" to="." method="_on_options_mouse_entered"]
 [connection signal="pressed" from="MainButtons/Options" to="." method="_on_settings_2_pressed"]
+[connection signal="mouse_entered" from="MainButtons/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="pressed" from="MainButtons/Quit" to="." method="_on_exit_pressed"]
 [connection signal="close_requested" from="Window" to="." method="_on_windowpopup_close_requested"]
+[connection signal="mouse_entered" from="Window/Camera2D/NoButton" to="." method="_on_no_button_mouse_entered"]
 [connection signal="pressed" from="Window/Camera2D/NoButton" to="." method="_on_no_button_pressed"]
 [connection signal="pressed" from="Window/Camera2D/NoButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Window/Camera2D/NoButton" to="Window" method="_on_no_button_pressed"]
+[connection signal="mouse_entered" from="Window/Camera2D/YesButton" to="." method="_on_yes_button_mouse_entered"]
 [connection signal="pressed" from="Window/Camera2D/YesButton" to="." method="_on_yes_button_pressed"]
 [connection signal="pressed" from="Settings/CrossIconButton" to="." method="_on_cross_icon_button_pressed"]
 [connection signal="value_changed" from="Settings/MusicControl" to="Settings/MusicControl" method="_on_value_changed"]
+[connection signal="mouse_entered" from="Settings/FullScreenControl" to="." method="_on_full_screen_control_mouse_entered"]
 [connection signal="toggled" from="Settings/FullScreenControl" to="Settings/FullScreenControl" method="_on_toggled"]
 [connection signal="value_changed" from="Settings/SFXControl" to="Settings/SFXControl" method="_on_value_changed"]

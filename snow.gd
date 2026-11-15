@@ -10,7 +10,7 @@ func _ready() -> void:
 	particles = CPUParticles2D.new()
 	add_child(particles)
 
-	particles.amount = 150
+	particles.amount = 20
 	particles.lifetime = 8.0
 	particles.preprocess = 8.0  
 	particles.emission_shape = CPUParticles2D.EMISSION_SHAPE_RECTANGLE

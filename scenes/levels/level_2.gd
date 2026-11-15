@@ -3,6 +3,8 @@ extends Node2D
 const THEME_MUSIC = preload("res://audio/Winter_wind.ogg")
 
 var can_interact: bool = false
+var checkpoint_reached: bool = false
+
 
 func _ready() -> void:
 	AudioController.play_music(THEME_MUSIC, true)
@@ -10,8 +12,10 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	$CanvasLayer/Label.text = "Height: " + str(int(round((round($Player.position.y) + 48) / -16)) + 510) + ' m'
-	if $Player.position.y < -8200:
+	if not checkpoint_reached and $Player.position.y < -8200:
+		checkpoint_reached = true
 		$"Borders/2".position.x = 159.0
+		AudioController.play_sfx(preload("res://audio/New_checkpiont_sound.wav"))
 	if Input.is_action_just_pressed("interact") and can_interact:
 		TransitionScreen.transition()
 		await TransitionScreen.on_transition_finished

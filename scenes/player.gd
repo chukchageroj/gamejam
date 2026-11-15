@@ -51,6 +51,7 @@ func get_input(delta: float) -> void:
 		charge_time = min(charge_time + delta, max_charge_time)
 
 	if Input.is_action_just_released("jump") and is_charging:
+		AudioController.play_sfx(preload("res://audio/Jump_sound.wav"))
 		var t: float = charge_time / max_charge_time
 		velocity.y = -lerp(min_jump_strength, max_jump_strength, t)
 		is_charging = false

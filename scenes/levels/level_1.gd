@@ -3,6 +3,7 @@ extends Node2D
 const THEME_MUSIC = preload("res://audio/March.ogg")
 
 var can_interact: bool = false
+var checkpoint_reached: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,8 +12,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	$CanvasLayer/Label.text = "Height: " + str(int(round((round($Player.position.y) + 48) / -16))) + ' m'
-	if $Player.position.y < -8200:
+	if not checkpoint_reached and $Player.position.y < -8200:
+		checkpoint_reached = true
 		$"Borders/2".position.x = 159.0
+		AudioController.play_sfx(preload("res://audio/New_checkpiont_sound.wav"))
 	if Input.is_action_just_pressed("interact") and can_interact:
 		TransitionScreen.transition()
 		await TransitionScreen.on_transition_finished
