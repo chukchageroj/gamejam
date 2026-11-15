@@ -124,27 +124,27 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/3 = SubResource("TileSetAtlasSource_fcfvj")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fcfvj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_go7sj"]
 atlas = ExtResource("3_ne2mo")
 region = Rect2(0, 0, 51, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pa8r4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gny6"]
 atlas = ExtResource("3_ne2mo")
 region = Rect2(51, 0, 51, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_15mv3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aecg"]
 atlas = ExtResource("3_ne2mo")
 region = Rect2(102, 0, 51, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e3sih"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dial"]
 atlas = ExtResource("3_ne2mo")
 region = Rect2(153, 0, 51, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2y5yt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nomh"]
 atlas = ExtResource("3_ne2mo")
 region = Rect2(204, 0, 51, 43)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2os1m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s4pk"]
 atlas = ExtResource("3_ne2mo")
 region = Rect2(255, 0, 51, 43)
 
@@ -152,22 +152,22 @@ region = Rect2(255, 0, 51, 43)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fcfvj")
+"texture": SubResource("AtlasTexture_go7sj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pa8r4")
+"texture": SubResource("AtlasTexture_7gny6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_15mv3")
+"texture": SubResource("AtlasTexture_2aecg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e3sih")
+"texture": SubResource("AtlasTexture_6dial")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2y5yt")
+"texture": SubResource("AtlasTexture_7nomh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2os1m")
+"texture": SubResource("AtlasTexture_1s4pk")
 }],
 "loop": 1,
 "name": &"default",

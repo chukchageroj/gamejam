@@ -9,10 +9,13 @@ extends CharacterBody2D
 
 @export var landing_duration: float = 0.25
 
+@export var wind_speed: float = -30.0
+
 var is_charging: bool = false
 var charge_time: float = 0.0
 var direction_x: float = 0.0
 var landing_timer: float = 0.0
+var air_is_on: bool = false
 
 func _physics_process(delta: float) -> void:
 	get_input(delta)
@@ -30,7 +33,10 @@ func _physics_process(delta: float) -> void:
 
 func get_input(delta: float) -> void:
 	direction_x = Input.get_axis("left", "right")
-	velocity.x = direction_x * speed
+	if air_is_on:
+		velocity.x = direction_x * speed + wind_speed
+	else:
+		velocity.x = direction_x * speed
 
 	if not is_on_floor():
 		is_charging = false

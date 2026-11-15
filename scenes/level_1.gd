@@ -8,7 +8,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	$CanvasLayer/Label.text = "Height: " + str((round($Player.position.y)))
+	$CanvasLayer/Label.text = "Height: " + str(int(round((round($Player.position.y) + 48) / -16))) + ' m'
 	if $Player.position.y < -8200:
 		$"Borders/2".position.x = 159.0
 	if Input.is_action_just_pressed("interact") and can_interact:

@@ -184,6 +184,59 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n3ac"]
 size = Vector2(31, 22)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_go7sj"]
+atlas = ExtResource("3_4nkto")
+region = Rect2(0, 0, 51, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gny6"]
+atlas = ExtResource("3_4nkto")
+region = Rect2(51, 0, 51, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2aecg"]
+atlas = ExtResource("3_4nkto")
+region = Rect2(102, 0, 51, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dial"]
+atlas = ExtResource("3_4nkto")
+region = Rect2(153, 0, 51, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nomh"]
+atlas = ExtResource("3_4nkto")
+region = Rect2(204, 0, 51, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s4pk"]
+atlas = ExtResource("3_4nkto")
+region = Rect2(255, 0, 51, 43)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2xxo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go7sj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gny6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2aecg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dial")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nomh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1s4pk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cbcq"]
+size = Vector2(31, 22)
+
 [node name="Level1" type="Node2D" unique_id=225641070]
 script = ExtResource("1_bswci")
 
@@ -253,6 +306,23 @@ text = "PEnis"
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1578917575]
 script = ExtResource("6_fcfvj")
+
+[node name="Camp2" type="Area2D" parent="." unique_id=1110122683]
+position = Vector2(154, -8213.5)
+collision_mask = 2
+
+[node name="Camp" type="AnimatedSprite2D" parent="Camp2" unique_id=601800470]
+sprite_frames = SubResource("SpriteFrames_x2xxo")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camp2" unique_id=1780944973]
+position = Vector2(1.5, 10.5)
+shape = SubResource("RectangleShape2D_2cbcq")
+
+[node name="Interact" type="Sprite2D" parent="Camp2" unique_id=703912752]
+visible = false
+position = Vector2(1, -20.5)
+texture = ExtResource("4_4nkto")
 
 [connection signal="body_entered" from="Camp" to="." method="_on_camp_body_entered"]
 [connection signal="body_exited" from="Camp" to="." method="_on_camp_body_exited"]
