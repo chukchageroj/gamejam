@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cp3kxclur3qub"]
 
-[ext_resource type="Script" uid="uid://bhpdjf1r5gtt4" path="res://scenes/flashbacks/flashback_1.gd" id="1_ogay5"]
-[ext_resource type="Texture2D" uid="uid://cy04m34skr0je" path="res://graphics/flashback_1.png" id="2_rrqto"]
+[ext_resource type="Script" uid="uid://cl8jp5lcgl8iy" path="res://scenes/flashbacks/flashback_2.gd" id="1_ogay5"]
+[ext_resource type="Texture2D" uid="uid://c6fd8dj27kfpn" path="res://graphics/flashback_2.png" id="2_ogay5"]
 [ext_resource type="Texture2D" uid="uid://dyjs0vkvohoar" path="res://graphics/E.png" id="3_fnaqr"]
 
 [node name="Flashback2" type="Node2D" unique_id=1631147547]
 script = ExtResource("1_ogay5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=869033696]
-texture = ExtResource("2_rrqto")
+texture = ExtResource("2_ogay5")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=548860873]
 texture_filter = 2
