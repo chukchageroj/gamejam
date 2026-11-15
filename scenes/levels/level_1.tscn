@@ -214,6 +214,7 @@ shape = SubResource("RectangleShape2D_f1jgh")
 [node name="Camp" type="Area2D" parent="." unique_id=176028246]
 position = Vector2(154, -8213.5)
 collision_mask = 2
+metadata/_edit_lock_ = true
 
 [node name="Camp" type="AnimatedSprite2D" parent="Camp" unique_id=1836636423]
 sprite_frames = SubResource("SpriteFrames_7n3ac")
@@ -234,7 +235,6 @@ speed = 300.0
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1110439568]
-zoom = Vector2(2, 2)
 limit_left = 0
 limit_right = 320
 limit_bottom = 0
@@ -242,16 +242,13 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 metadata/_edit_group_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2023405988]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578917575]
+script = ExtResource("6_fcfvj")
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=335586971]
 offset_right = 42.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "PEnis"
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1578917575]
-script = ExtResource("6_fcfvj")
 
 [connection signal="body_entered" from="Camp" to="." method="_on_camp_body_entered"]
 [connection signal="body_exited" from="Camp" to="." method="_on_camp_body_exited"]

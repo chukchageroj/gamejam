@@ -13,12 +13,13 @@ config_version=5
 config/name="gamejam"
 run/main_scene="uid://daj0wpld85vgm"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=240
+window/size/viewport_width=640
+window/size/viewport_height=480
 window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
